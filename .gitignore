@@ -1,0 +1,5 @@
+# Raw ad text stays local (copyright). Never commit it.
+raw_ads/
+.env
+*.ipynb_checkpoints/
+__pycache__/
