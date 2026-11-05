@@ -1,0 +1,154 @@
+# Seed taxonomy v0.1 - a starting point, NOT final.
+# Plan: label the first ~30 ads, add whatever is missing, merge duplicates,
+# then freeze v1.0 after ~50 ads and log every change in CHANGELOG.md.
+# aliases are matched case-insensitively on word boundaries.
+# Ambiguous aliases (r, go, c, sas, excel) need context rules - see schema.md.
+
+roles:
+  - {id: data_analyst, label: Data Analyst, includes: [BI Analyst, Reporting Analyst, Insights Analyst]}
+  - {id: data_scientist, label: Data Scientist, includes: [ML Engineer (junior), Applied Scientist, Data Science Graduate]}
+  - {id: software_developer, label: Software Developer, includes: [Software Engineer, Full-stack, Backend, Frontend]}
+  - {id: business_analyst, label: Business Analyst, includes: [Systems Analyst, Technology Analyst, Product Analyst]}
+  - {id: economist, label: Economist / Economic Analyst, includes: [Research Analyst, Policy Analyst, Economic Consultant]}
+
+skills:
+  programming:
+    - {id: python, aliases: [python, python3]}
+    - {id: r, aliases: [r programming, r language, rstudio, "r/python", "python/r"]}   # bare "R" needs context
+    - {id: java, aliases: [java]}                                                        # not javascript
+    - {id: javascript, aliases: [javascript, js, ecmascript]}
+    - {id: typescript, aliases: [typescript]}
+    - {id: csharp, aliases: ["c#", csharp]}
+    - {id: cpp, aliases: ["c++", cpp]}
+    - {id: scala, aliases: [scala]}
+    - {id: golang, aliases: [golang, "go lang"]}                                         # bare "Go" needs context
+    - {id: php, aliases: [php]}
+    - {id: sas, aliases: [sas programming, "sas/stat", base sas]}
+    - {id: matlab, aliases: [matlab]}
+    - {id: vba, aliases: [vba, macros]}
+    - {id: shell_scripting, aliases: [bash, shell scripting, powershell]}
+
+  databases_and_querying:
+    - {id: sql, aliases: [sql, t-sql, pl/sql, "sql queries"]}
+    - {id: postgresql, aliases: [postgresql, postgres]}
+    - {id: mysql, aliases: [mysql]}
+    - {id: sql_server, aliases: [sql server, mssql, ms sql]}
+    - {id: oracle_db, aliases: [oracle database, oracle db]}
+    - {id: mongodb, aliases: [mongodb]}
+    - {id: nosql, aliases: [nosql]}
+    - {id: snowflake, aliases: [snowflake]}
+    - {id: bigquery, aliases: [bigquery]}
+    - {id: redshift, aliases: [redshift]}
+
+  bi_and_visualisation:
+    - {id: power_bi, aliases: [power bi, powerbi, microsoft power bi]}
+    - {id: tableau, aliases: [tableau]}
+    - {id: looker, aliases: [looker, looker studio, data studio]}
+    - {id: qlik, aliases: [qlik, qlikview, qlik sense]}
+    - {id: dashboards, aliases: [dashboard, dashboards, dashboarding]}
+    - {id: data_visualisation, aliases: [data visualisation, data visualization, data viz]}
+    - {id: python_viz, aliases: [matplotlib, seaborn, plotly]}
+    - {id: ggplot2, aliases: [ggplot, ggplot2]}
+    - {id: d3, aliases: [d3, d3.js]}
+
+  spreadsheets:
+    - {id: excel, aliases: [excel, microsoft excel, ms excel]}
+    - {id: advanced_excel, aliases: [pivot table, pivot tables, vlookup, xlookup, power query, advanced excel]}
+    - {id: google_sheets, aliases: [google sheets]}
+
+  statistics_and_methods:
+    - {id: statistics, aliases: [statistics, statistical analysis, statistical]}
+    - {id: hypothesis_testing, aliases: [hypothesis testing, significance testing]}
+    - {id: regression, aliases: [regression, linear regression, logistic regression]}
+    - {id: time_series, aliases: [time series, time-series]}
+    - {id: forecasting, aliases: [forecasting, forecast]}
+    - {id: ab_testing, aliases: [a/b testing, ab testing, experimentation, experimental design]}
+    - {id: causal_inference, aliases: [causal inference, causal analysis]}
+    - {id: econometrics, aliases: [econometrics, econometric]}
+
+  machine_learning:
+    - {id: machine_learning, aliases: [machine learning, ml models, predictive modelling, predictive modeling]}
+    - {id: deep_learning, aliases: [deep learning, neural networks]}
+    - {id: nlp, aliases: [nlp, natural language processing, text mining]}
+    - {id: llm_genai, aliases: [llm, llms, generative ai, genai, large language models]}
+    - {id: computer_vision, aliases: [computer vision]}
+    - {id: pandas, aliases: [pandas]}
+    - {id: numpy, aliases: [numpy]}
+    - {id: scikit_learn, aliases: [scikit-learn, sklearn]}
+    - {id: pytorch, aliases: [pytorch]}
+    - {id: tensorflow, aliases: [tensorflow, keras]}
+
+  data_engineering:
+    - {id: etl, aliases: [etl, elt]}
+    - {id: data_pipelines, aliases: [data pipeline, data pipelines]}
+    - {id: data_modelling, aliases: [data modelling, data modeling, dimensional modelling, star schema]}
+    - {id: data_warehousing, aliases: [data warehouse, data warehousing]}
+    - {id: spark, aliases: [spark, pyspark, databricks]}
+    - {id: airflow, aliases: [airflow]}
+    - {id: dbt, aliases: [dbt]}
+    - {id: kafka, aliases: [kafka]}
+    - {id: data_quality, aliases: [data quality, data cleaning, data cleansing, data governance]}
+
+  cloud_and_devops:
+    - {id: aws, aliases: [aws, amazon web services]}
+    - {id: azure, aliases: [azure, microsoft azure]}
+    - {id: gcp, aliases: [gcp, google cloud]}
+    - {id: git, aliases: [git, github, gitlab, version control]}
+    - {id: docker, aliases: [docker, containers]}
+    - {id: kubernetes, aliases: [kubernetes, k8s]}
+    - {id: ci_cd, aliases: [ci/cd, ci cd, continuous integration, continuous delivery]}
+    - {id: terraform, aliases: [terraform, infrastructure as code]}
+    - {id: linux, aliases: [linux, unix]}
+
+  web_and_software:
+    - {id: html_css, aliases: [html, css, html5, css3]}
+    - {id: react, aliases: [react, react.js, reactjs]}
+    - {id: angular, aliases: [angular]}
+    - {id: vue, aliases: [vue, vue.js]}
+    - {id: nodejs, aliases: [node.js, nodejs, node]}
+    - {id: rest_api, aliases: [rest, rest api, restful, apis, api development]}
+    - {id: graphql, aliases: [graphql]}
+    - {id: spring_boot, aliases: [spring, spring boot]}
+    - {id: dotnet, aliases: [.net, dotnet, asp.net]}
+    - {id: python_web, aliases: [django, flask, fastapi]}
+    - {id: microservices, aliases: [microservices]}
+    - {id: oop, aliases: [oop, object-oriented, object oriented]}
+    - {id: data_structures_algorithms, aliases: [data structures, algorithms]}
+    - {id: testing, aliases: [unit testing, unit tests, automated testing, test automation, tdd]}
+    - {id: system_design, aliases: [system design, software architecture]}
+
+  ways_of_working:
+    - {id: agile, aliases: [agile]}
+    - {id: scrum, aliases: [scrum]}
+    - {id: kanban, aliases: [kanban]}
+    - {id: jira, aliases: [jira, confluence]}
+    - {id: sdlc, aliases: [sdlc, software development lifecycle]}
+
+  business_analysis:
+    - {id: requirements_gathering, aliases: [requirements gathering, requirements elicitation, business requirements, functional requirements]}
+    - {id: process_mapping, aliases: [process mapping, process modelling, process modeling, bpmn, process improvement]}
+    - {id: user_stories, aliases: [user stories, acceptance criteria]}
+    - {id: stakeholder_management, aliases: [stakeholder management, stakeholder engagement, stakeholders]}
+    - {id: uat, aliases: [uat, user acceptance testing]}
+    - {id: business_case, aliases: [business case, gap analysis, cost-benefit, cost benefit]}
+    - {id: change_management, aliases: [change management]}
+    - {id: visio_miro, aliases: [visio, miro, lucidchart]}
+
+  economics_and_policy:
+    - {id: stata, aliases: [stata]}
+    - {id: eviews, aliases: [eviews]}
+    - {id: economic_modelling, aliases: [economic modelling, economic modeling, cge, dsge, macroeconomic]}
+    - {id: policy_analysis, aliases: [policy analysis, policy advice, policy development, public policy]}
+    - {id: financial_modelling, aliases: [financial modelling, financial modeling, valuation]}
+    - {id: market_research, aliases: [market analysis, market research, industry analysis]}
+    - {id: research_writing, aliases: [report writing, research and writing, written reports, briefing]}
+
+  soft_skills:
+    - {id: communication, aliases: [communication skills, written communication, verbal communication, communicate]}
+    - {id: presentation, aliases: [presentation skills, present findings, presenting]}
+    - {id: data_storytelling, aliases: [data storytelling, storytelling]}
+    - {id: teamwork, aliases: [teamwork, team player, collaborate, collaboration]}
+    - {id: problem_solving, aliases: [problem solving, problem-solving, analytical thinking, critical thinking]}
+    - {id: attention_to_detail, aliases: [attention to detail]}
+    - {id: initiative, aliases: [initiative, self-starter, proactive]}
+    - {id: client_facing, aliases: [client facing, client-facing, customer-facing]}
